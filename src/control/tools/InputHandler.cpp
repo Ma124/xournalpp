@@ -36,7 +36,7 @@ void InputHandler::createStroke(Point p) {
     ToolHandler* h = xournal->getControl()->getToolHandler();
 
     stroke = new Stroke();
-    stroke->setWidth(h->getThickness());
+    stroke->setWidth(adjustWidth(h->getThickness()));
     stroke->setColor(h->getColor());
     stroke->setFill(h->getFill());
     stroke->setLineStyle(h->getLineStyle());
@@ -63,4 +63,8 @@ void InputHandler::createStroke(Point p) {
 
 auto InputHandler::validMotion(Point p, Point q) -> bool {
     return hypot(p.x - q.x, p.y - q.y) >= PIXEL_MOTION_THRESHOLD;
+}
+
+double InputHandler::adjustWidth(double w) {
+    return w;
 }

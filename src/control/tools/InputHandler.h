@@ -112,6 +112,7 @@ protected:
     static bool validMotion(Point p, Point q);
 
     void createStroke(Point p);
+    virtual double adjustWidth(double w);
 
     static constexpr double PIXEL_MOTION_THRESHOLD = 0.3;
 

@@ -55,6 +55,7 @@ protected:
      * @brief 	Toggle shift and control modifiers depending on initial drawing direction.
      */
     void modifyModifiersByDrawDir(double width, double height, bool changeCursor = true);
+    double adjustWidth(double w);
 
 protected:
     DocumentView view;

@@ -227,3 +227,7 @@ void BaseStrokeHandler::modifyModifiersByDrawDir(double width, double height, bo
         this->modControl = this->modControl == !gestureControl;
     }
 }
+
+double BaseStrokeHandler::adjustWidth(double w) {
+    return w*0.602;
+}
